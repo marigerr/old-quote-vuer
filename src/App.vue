@@ -4,7 +4,7 @@
     <button v-on:click="randomQuote()">Random Quote</button>
     <p><a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{quote.author}}</a></p>
     <!-- <p>{{quote.author}}</p> -->
-    <p>"{{quote.quote}}"</p>
+    <p>{{quote.quote}}</p>
     <h2>Search Quotes</h2>
     <input v-model="startswith" v-on:keyup="search()" placeholder="search by author" type="text">
     <ul id="authors">
@@ -47,6 +47,7 @@ export default {
         .get("https://mighty-poet.glitch.me/api.quotes/random")
         .then(response => {
           this.quote = response.data;
+          this.quote.quote = `"${this.quote.quote}"`;
           this.wikiLink = "https://en.wikipedia.org/wiki/" + this.quote.author;
         })
         .catch(function(error) {
