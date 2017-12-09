@@ -1,5 +1,5 @@
 # Quote Vuer
 
-> vue.js client that display quotes from [nodejs quote api](https://github.com/marigerr/random-quote-api)
+Vue.js client that display quotes from [nodejs quote api](https://github.com/marigerr/quote-api)
 
 

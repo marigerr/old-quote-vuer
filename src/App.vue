@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <!-- <p><a href="https://mighty-poet.glitch.me/" target="blank">API Docs</a></p> -->
     <h1>Quotes</h1>
-    <button v-on:click="randomQuote()">Random Quote</button>
+    <button id="randomQuoteBtn" v-on:click="randomQuote()">Random Quote</button>
     <p><a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{quote.author}}</a></p>
     <!-- <p>{{quote.author}}</p> -->
     <p>{{quote.quote}}</p>
@@ -42,7 +43,6 @@ export default {
       this.quotes = [];
       this.wikiLink = "";
       this.author = "";
-      this.quote = "";
       axios
         .get("https://mighty-poet.glitch.me/api.quotes/random")
         .then(response => {
@@ -76,8 +76,6 @@ export default {
       }
     },
     authorQuotes: function(author) {
-      this.author = author;
-      this.wikiLink = "https://en.wikipedia.org/wiki/" + author;
       axios
         .get("https://mighty-poet.glitch.me/api.quotes/author", {
           params: {
@@ -85,6 +83,8 @@ export default {
           }
         })
         .then(response => {
+          this.author = author;
+          this.wikiLink = "https://en.wikipedia.org/wiki/" + author;
           this.quotes = response.data;
         })
         .catch(function(error) {
@@ -96,13 +96,22 @@ export default {
 </script>
 
 <style>
+/* html { */
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;  
   text-align: center;
-  color: #2c3e50;
+    color: #2c3e50;
+
+  /* color: white; */
   margin-top: 60px;
+  /* background-color: black;
+  font-family: "Zilla Slab", serif;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px; */
 }
 
 h1,
@@ -129,7 +138,49 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: ;
+/* a:link {
+  color: #22333c;
 }
+a:visited {
+  color: #22333c;
+}
+a:hover {
+  color: #b69274;
+}
+
+#randomQuoteBtn {
+  width: auto;
+  height: auto;
+  background-color: lightslategray;
+  border: 2px solid #b0a28f;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Zilla Slab", serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 5px #22333c;
+  box-sizing: border-box;
+}
+
+#randomQuoteBtn:hover {
+  background-color: #22333c;
+  color: white;
+  font-weight: normal;
+}
+
+#randomQuoteBtn:active {
+  background-color: #22333c;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+#randomQuoteBtn:focus {
+  outline: 0;
+} */
 </style>
