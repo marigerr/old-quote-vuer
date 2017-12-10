@@ -2,63 +2,13 @@
   margin-top: 20px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: normal;
 }
 
-#authors button {
-  margin-bottom: 10px;
+a {
+  color: white;
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#quotes li {
-  display: block;
-  margin: 10px 10px;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-/* Loader */
-
-.loader {
-  margin: auto;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid green;
-  border-right: 16px solid green;
-  border-bottom: 16px solid rgb(81, 61, 173);
-  border-left: 16px solid rgb(81, 61, 173);
-  width: 100px;
-  height: 100px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /* a:link {
   color: #22333c;
 }
@@ -67,6 +17,12 @@ a:visited {
 }
 a:hover {
   color: #b69274;
+}
+*/
+
+#quoteBox {
+  width: 50%;
+  margin: 100px auto;
 }
 
 #randomQuoteBtn {
@@ -103,4 +59,4 @@ a:hover {
 
 #randomQuoteBtn:focus {
   outline: 0;
-} */
+} 

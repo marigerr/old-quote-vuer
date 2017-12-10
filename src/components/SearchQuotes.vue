@@ -1,5 +1,5 @@
 <template>
-  <div id="main">
+  <div>
     <Links>
     </Links>    
     <h2>Search Quotes</h2>

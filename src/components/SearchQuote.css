@@ -1,8 +1,22 @@
-#main {
-  margin-top: 20px;
-}
-
 input::placeholder {
   text-align: center;
 }
 
+#authors button {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#quotes li {
+  display: block;
+  margin: 10px 10px;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}

@@ -1,13 +1,12 @@
 <template>
   <div>
-    <div v-if='loading' class="loader"></div>
-    <div v-else id="main">
-      <Links>
-      </Links>
-      <p>{{quote.quote}}</p>
+    <Links>
+    </Links>
+    <div v-if='quote.quote' id="quoteBox">
+      <h3>{{quote.quote}}</h3>
       <p><a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{quote.author}}</a></p>
-      <button id="randomQuoteBtn" v-on:click="randomQuote()">New Quote</button>
     </div>
+    <button v-if='quote.quote' id="randomQuoteBtn" v-on:click="randomQuote()">New Quote</button>
   </div>
 </template>
 
@@ -20,7 +19,6 @@ export default {
   name: "randomquote",
   data() {
     return {
-      loading: true,
       author: "",
       wikiLink: "",
       quote: {}
@@ -34,13 +32,10 @@ export default {
   },
   methods: {
     randomQuote: function() {
-      this.author = "";
-      this.quotes = [];
       this.wikiLink = "";
       axios
         .get("https://mighty-poet.glitch.me/api.quotes/random")
         .then(response => {
-          this.loading = false;
           this.quote = response.data;
           this.quote.quote = `"${this.quote.quote}"`;
           this.wikiLink = "https://en.wikipedia.org/wiki/" + this.quote.author;
