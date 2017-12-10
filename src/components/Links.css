@@ -1,0 +1,9 @@
+#links {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+#links a {
+  margin-right: 20px;
+}
