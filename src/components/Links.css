@@ -13,3 +13,7 @@
 #links a:hover {
   color: lightslategray;
 }
+
+#links a:visited  {
+  color: white;
+}

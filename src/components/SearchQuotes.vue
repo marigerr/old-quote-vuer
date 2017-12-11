@@ -1,8 +1,8 @@
 <template>
   <div>
     <div id="searchComponent">
-      <h3>Search Quotes</h3>
-      <input v-model="startswith" v-on:keyup="search()" placeholder="author" type="text">
+      <p>Search Quotes</p>
+      <input autoFocus v-model="startswith" v-on:keyup="search()" placeholder="by author" type="text">
       <ul id="authors">
         <li v-for="author in authors" v-bind:key="author">
           <button v-on:click="authorQuotes(author)">{{ author }}</button>

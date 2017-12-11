@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if='quote.quote' id="quoteBox">
-      <h3>{{quote.quote}}</h3>
+      <p>{{quote.quote}}</p>
       <p><a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{quote.author}}</a></p>
     </div>
     <button v-if='quote.quote' id="randomQuoteBtn" v-on:click="randomQuote()">New Quote</button>
