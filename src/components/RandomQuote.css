@@ -1,24 +1,10 @@
-#main {
-  margin-top: 20px;
-}
-
-h1, h2, h3 {
-  font-weight: normal;
-}
-
-a {
+a:link {
   color: white;
 }
-/* a:link {
-  color: #22333c;
-}
-a:visited {
-  color: #22333c;
-}
+
 a:hover {
-  color: #b69274;
+  color: lightslategray;
 }
-*/
 
 #quoteBox {
   width: 50%;

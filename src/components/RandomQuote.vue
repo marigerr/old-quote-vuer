@@ -1,7 +1,5 @@
 <template>
   <div>
-    <Links>
-    </Links>
     <div v-if='quote.quote' id="quoteBox">
       <h3>{{quote.quote}}</h3>
       <p><a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{quote.author}}</a></p>
@@ -12,7 +10,6 @@
 
 <script>
 import axios from "axios";
-import Links from "./Links.vue";
 import "./RandomQuote.css";
 
 export default {
@@ -24,15 +21,14 @@ export default {
       quote: {}
     };
   },
-  components: {
-    Links
-  },
+  // components: {
+  //   Links
+  // },
   created: function() {
     this.randomQuote();
   },
   methods: {
     randomQuote: function() {
-      this.wikiLink = "";
       axios
         .get("https://mighty-poet.glitch.me/api.quotes/random")
         .then(response => {

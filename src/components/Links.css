@@ -9,3 +9,7 @@
   text-decoration: none;
   color:white;
 }
+
+#links a:hover {
+  color: lightslategray;
+}

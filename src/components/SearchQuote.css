@@ -6,6 +6,11 @@ input::placeholder {
   margin-bottom: 10px;
 }
 
+#searchComponent {
+  width: 50%;
+  margin: 100px auto;
+}
+
 ul {
   list-style-type: none;
   padding: 0;

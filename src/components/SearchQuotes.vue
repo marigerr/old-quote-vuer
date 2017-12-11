@@ -1,26 +1,25 @@
 <template>
   <div>
-    <Links>
-    </Links>    
-    <h2>Search Quotes</h2>
-    <input v-model="startswith" v-on:keyup="search()" placeholder="author" type="text">
-    <ul id="authors">
-      <li v-for="author in authors" v-bind:key="author">
-        <button v-on:click="authorQuotes(author)">{{ author }}</button>
-      </li>
-    </ul>
-    <a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{author}}</a>
-    <ul id="quotes">
-      <li v-for="quote in quotes" v-bind:key="quote._id">
-        "{{ quote.quote }}"
-      </li>
-    </ul>    
+    <div id="searchComponent">
+      <h3>Search Quotes</h3>
+      <input v-model="startswith" v-on:keyup="search()" placeholder="author" type="text">
+      <ul id="authors">
+        <li v-for="author in authors" v-bind:key="author">
+          <button v-on:click="authorQuotes(author)">{{ author }}</button>
+        </li>
+      </ul>
+      <a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{author}}</a>
+      <ul id="quotes">
+        <li v-for="quote in quotes" v-bind:key="quote._id">
+          "{{ quote.quote }}"
+        </li>
+      </ul>    
+    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import Links from "./Links.vue";
 import "./SearchQuote.css";
 
 export default {
@@ -35,9 +34,6 @@ export default {
       quote: {}
     };
   },
-  components: {
-    Links
-  },  
   methods: {
     search: function() {
       this.authors = [];
