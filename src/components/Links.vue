@@ -1,5 +1,5 @@
 <template>
-  <div id="links">
+  <div>
     <router-link to="/search-quotes">Search</router-link>
     <router-link to="/">Random</router-link>
     <a href="https://mighty-poet.glitch.me/" target="blank">API Info</a>

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Loader v-if='loading'/>
-    <div v-else>   
-      <Links/>
+    <div v-else id="page">   
+      <Links id="links"/>
       <router-view id="main"/>
     </div>
   </div>

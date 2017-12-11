@@ -1,4 +1,4 @@
-body, html {
+body, html, #page {
   height: 100%;
   display: grid;
   margin: 0px;
@@ -12,18 +12,18 @@ body, html {
   background-color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*  
-  width: 100%;
-  margin: 0px;
-  padding: 0px; */
 }
 
 #main {
-  /* margin-top: 20px; */
   font-size: 40px;
-  margin: auto;
 }
 
-h1, h2, h3 {
-  font-weight: normal;
+#links {
+  font-size: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  #links {
+    font-size: 24px;
+  }
 }
