@@ -2,21 +2,14 @@ input::placeholder {
   text-align: center;
 }
 
-#authors button {
-  margin-bottom: 10px;
-}
-
-#searchComponent {
-  width: 50%;
-  margin: 100px auto;
-}
-
 input {
   background-color: black;
   color: white;
   border: none;
   border-bottom: 2px solid #D3D3D3;
-  width: 250px;
+  width: auto;
+  font-size: 24px;
+  margin-bottom: 40px;
 }
 
 input:focus, input:active {
@@ -25,19 +18,43 @@ input:focus, input:active {
   outline: none;
 }
 
+#search-results {
+  display: flex;
+  justify-content: space-around;
+}
+
+#search-result-authors button {
+  background:none!important;
+  color:inherit;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  border-bottom:1px solid #444; 
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  #search-result-authors button, #search-result-authors li,
+  #search-result-quotes {
+    font-size: 24px;
+  }
+}
+
+#search-result-authors  {
+  flex-basis: 20%;
+  text-align: left;
+}
+
+#search-result-quotes  {
+  flex-basis: 60%;
+  text-align: left;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
 }
 
-#quotes li {
-  display: block;
-  margin: 10px 10px;
+#search-result-quotes li {
+  margin-bottom: 15px;
 }
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-

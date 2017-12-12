@@ -1,19 +1,24 @@
 <template>
   <div>
     <div id="searchComponent">
-      <p>Search Quotes</p>
-      <input autoFocus v-model="startswith" v-on:keyup="search()" placeholder="by author" type="text">
-      <ul id="authors">
-        <li v-for="author in authors" v-bind:key="author">
-          <button v-on:click="authorQuotes(author)">{{ author }}</button>
-        </li>
-      </ul>
-      <a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{author}}</a>
-      <ul id="quotes">
-        <li v-for="quote in quotes" v-bind:key="quote._id">
-          "{{ quote.quote }}"
-        </li>
-      </ul>    
+      <!-- <p>Search Quotes</p> -->
+      <input autoFocus v-model="startswith" v-on:keyup="search()" placeholder="Search by author" type="text">   
+    </div>
+    <div id="search-results">
+      <div id="search-result-authors">
+        <ul id="authors">
+          <li v-for="author in authors" v-bind:key="author">
+            <button v-on:click="authorQuotes(author)">{{ author }}</button>
+          </li>
+        </ul>
+      </div>
+      <div id="search-result-quotes">
+          <a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{author}}</a>
+          <ul id="quotes">
+            <li v-for="quote in quotes" v-bind:key="quote._id">
+            "{{ quote.quote }}"</li>
+          </ul> 
+      </div>
     </div>
   </div>
 </template>
