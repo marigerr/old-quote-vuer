@@ -1,5 +1,13 @@
-.loader {
-  margin: auto;
+#loader {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid green;
@@ -27,5 +35,15 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+#loader p {
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  #loader p {
+    font-size: 24px;
   }
 }
