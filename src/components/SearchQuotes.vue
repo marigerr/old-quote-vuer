@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="searchComponent">
+    <div id="search-input-wrapper">
       <!-- <p>Search Quotes</p> -->
       <input autoFocus v-model="startswith" v-on:keyup="search()" placeholder="Search by author" type="text">   
     </div>

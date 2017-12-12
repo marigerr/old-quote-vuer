@@ -1,3 +1,12 @@
+#search-input-wrapper {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+#search-results {
+  flex-basis: 90%
+}
+
 input::placeholder {
   text-align: center;
 }
@@ -7,8 +16,7 @@ input {
   color: white;
   border: none;
   border-bottom: 2px solid #D3D3D3;
-  width: auto;
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 40px;
 }
 
@@ -29,8 +37,13 @@ input:focus, input:active {
   border:none; 
   padding:0!important;
   font: inherit;
-  border-bottom:1px solid #444; 
+  /* border-bottom:1px solid #444;  */
   cursor: pointer;
+}
+
+#search-result-authors  button{
+  text-align: left;
+  font-size: 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -42,8 +55,11 @@ input:focus, input:active {
 
 #search-result-authors  {
   flex-basis: 20%;
-  text-align: left;
-}
+}   
+
+#search-result-authors  ul{
+  margin: 0px;
+}   
 
 #search-result-quotes  {
   flex-basis: 60%;

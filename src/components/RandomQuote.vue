@@ -1,10 +1,14 @@
 <template>
   <div>
-    <div v-if='quote.quote' id="quoteBox">
-      <p>{{quote.quote}}</p>
-      <p><a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{quote.author}}</a></p>
+    <div v-if='quote.quote' id="random-quote-and-button">
+      <div id="random-quote-and-author">
+        <p>{{quote.quote}}</p>
+        <p><a id="wikiLink" v-bind:href="wikiLink" target="_blank">{{quote.author}}</a></p>
+      </div>
+      <div id="random-quote-btn-wrapper">
+        <button v-if='quote.quote' id="random-quote-btn" v-on:click="randomQuote()">New Quote</button>
+      </div>
     </div>
-    <button v-if='quote.quote' id="randomQuoteBtn" v-on:click="randomQuote()">New Quote</button>
   </div>
 </template>
 
@@ -21,9 +25,6 @@ export default {
       quote: {}
     };
   },
-  // components: {
-  //   Links
-  // },
   created: function() {
     this.randomQuote();
   },

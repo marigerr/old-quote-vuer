@@ -1,29 +1,36 @@
 body, html, #page {
   height: 100%;
-  display: grid;
   margin: 0px;
+  background-color: black;
 }
 #app {
   height: 100%;
-  display: grid;
   font-family: "Zilla Slab", serif;
-  text-align: center;
   color: white;
-  background-color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+#page {
+  display:flex;
+  flex-direction: column;  
+}
+
 #main {
-  font-size: 40px;
+  flex-basis: 90%;
+  font-size: 14px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #links {
-  font-size: 40px;
+  flex-basis: 10%;
+  font-size: 12px;
 }
 
 @media only screen and (min-width: 768px) {
-  #links {
+  #links, #main {
     font-size: 24px;
   }
 }
