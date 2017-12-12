@@ -72,6 +72,7 @@ export default {
           this.quotes = response.data;
           this.author = author;
           this.wikiLink = "https://en.wikipedia.org/wiki/" + author;
+          document.getElementById('links').scrollIntoView();
         })
         .catch(function(error) {
           console.log(error);

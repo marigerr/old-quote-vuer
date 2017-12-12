@@ -21,7 +21,7 @@ body, html, #page {
 
 #main {
   flex-basis: 90%;
-  font-size: 14px;
+  font-size: 18px;
   display:flex;
   flex-direction: column;
   justify-content: center;

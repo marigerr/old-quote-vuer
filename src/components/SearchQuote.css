@@ -43,7 +43,11 @@ input:focus, input:active {
 
 #search-result-authors  button{
   text-align: left;
-  font-size: 10px;
+  font-size: 12px;
+}
+
+#search-result-quotes {
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 768px) {
